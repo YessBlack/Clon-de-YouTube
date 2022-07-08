@@ -20,9 +20,15 @@
     --normal-font-size:1rem; /*16px*/
     --small-font-size:0.875rem; /*14px*/
     --smaller-font-size:0.75rem; /*12px*/
+    --font-bold:500;
 }
 /* ------------ General --------------*/
 body {
     font-family: var(--body-font);
-
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: var(--font-bold);
+}
+button {
+    font-family: var(--body-font);
 }
