@@ -21,6 +21,11 @@
     --small-font-size:0.875rem; /*14px*/
     --smaller-font-size:0.75rem; /*12px*/
     --font-bold:500;
+
+    /*Otros*/
+    --header-height:56px;
+    --z-tooltip:25;
+    --z-fixed:100;
 }
 /* ------------ General --------------*/
 body {
@@ -31,4 +36,19 @@ h1,h2,h3,h4,h5,h6 {
 }
 button {
     font-family: var(--body-font);
+}
+
+/* ---------- Cabecera principal -------- */
+.main-header {
+    height: var(--header-height);
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: var(--z-fixed);
 }
