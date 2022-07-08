@@ -1,0 +1,28 @@
+*,*::after,*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Variables --------------*/
+:root {
+    /*Colores*/
+    --accent-color:#ff0000;
+    --gray-color:#909090;
+    --gray-color-alt:#ccc;
+
+    /*font-family*/
+    --body-font:'Roboto', sans-serif;
+    --icon-font:'icomoon';
+
+    /*Tamaño texto*/
+    --big-font-size:1.125rem; /*18px*/
+    --normal-font-size:1rem; /*16px*/
+    --small-font-size:0.875rem; /*14px*/
+    --smaller-font-size:0.75rem; /*12px*/
+}
+/* ------------ General --------------*/
+body {
+    font-family: var(--body-font);
+
+}
