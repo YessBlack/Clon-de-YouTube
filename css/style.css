@@ -14,6 +14,7 @@
     --text-color:#030303;
     --bg-color-active:#e5e5e5;
     --text-color-white:#fff;
+    --border-color:rgba(0, 0, 0, 0.1);
 
     /*font-family*/
     --body-font:'Roboto', sans-serif;
@@ -71,6 +72,31 @@ button {
 }
 .main-header .start .action-button{
     margin-right: 1rem;
+}
+.main-header .middle {
+    flex-basis: 720px;
+    padding: 0 2rem;
+}
+.main-header .input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-right: 0;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+.main-header .form-search {
+    flex-grow: 1;
+    align-items: stretch;
+}
+.main-header .submit {
+    padding: 0 1.5rem;
+    border: 1px solid var(--border-color);
+    font-size: 1.25rem;
+    color: var(--text-color-alt);
+    cursor: pointer;
+}
+.main-header .user {
+    padding: 0 1.7rem;
 }
 /* -------- Avatar Usuario -----------*/
 .user-avatar {
