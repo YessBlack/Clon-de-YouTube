@@ -200,11 +200,38 @@ hr {
     font-weight: var(--font-bold);
 }
 /*iconos de la navegacion*/
-.main-nav .link .icon {
-    margin-right: 1.5rem;
+.main-nav .link .icon {    
     font-size: 1.5rem;
     color: var(--text-color-alt);
 }
+.main-nav .link.is-in-live::after,
+.main-nav .link.is-new::after {
+    font-family: var(--icon-font);
+    margin-left: auto;
+}
+.main-nav .link.is-in-live::after {
+    content :'\e911';
+    color: var(--accent-color);
+}
+.main-nav .link.is-new::after {
+    content:'\e91b';
+    color: #065FD4;
+    font-size: 0.5rem;
+}
 .main-nav .link.is-active .icon {
     color: var(--accent-color);
+}
+.main-nav .link .user-avatar {
+    --size:1.5rem;
+}
+.main-nav .link .icon,
+.main-nav .link .user-avatar{
+    margin-right: 1.5rem;
+}
+/*Titulo de secciones en navegacion lateral*/
+.nav-title {
+    text-transform: uppercase;
+    color: var(--text-color-alt);
+    font: var(--small-font-size);
+    padding: var(--main-nav-padding);
 }
