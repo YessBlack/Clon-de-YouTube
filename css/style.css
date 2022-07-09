@@ -35,6 +35,14 @@
     --border-radius:2px;
     --transition-time:0.25s;
     --sidebar-width:240px;
+
+    /*Scroll*/
+    --scroll-size:16px;
+    --scroll-bg:transparent;
+    --scroll-radius:8px;
+    --scroll-padding:4px;
+    --thumb-bg:var(--gray-color);
+    --thumb-bg-alt:var(--gray-color-alt);
 }
 /* ------------ General --------------*/
 body {
@@ -53,6 +61,30 @@ hr {
     border-bottom: 1px solid var(--border-color);
     margin-bottom: var(--spacing);
     padding-top: var(--spacing);
+}
+body {
+    min-height: 200vh;
+}
+/*----------------  scroll ---------------*/
+.scroll::-webkit-scrollbar {
+    width: var(--scroll-size); /*Scroll Y*/
+    height: var(--scroll-size); /*Scroll Y*/
+}
+.scroll::-webkit-scrollbar-thumb{
+    background-color: var(--thumb-bg);
+    border-radius: var(--scroll-radius);
+    border: var(--scroll-padding) solid transparent;
+    background-clip: content-box;
+}
+.scroll::-webkit-scrollbar-thumb:hover{
+    background-color: var(--thumb-bg-alt);
+}
+.scroll:not(body)::-webkit-scrollbar-thumb {
+    display: none;
+    background-color: var(--thumb-bg-alt);
+}
+.scroll:not(body)::-webkit-scrollbar-thumb:hover {
+    display: block;
 }
 /* ---------- Cabecera principal -------- */
 .place-center {
@@ -235,3 +267,27 @@ hr {
     font: var(--small-font-size);
     padding: var(--main-nav-padding);
 }
+/* ---------- Footer nav ----------*/
+.main-nav-footer {
+    padding: var(--main-nav-padding);
+    display: grid;
+    gap: 0.75rem;
+}
+.main-nav-footer .container{
+    font-size: var(--smaller-font-size);
+}
+.main-nav-footer .link-footer {
+    text-decoration: none;
+    font-weight: var(--font-bold);
+    color: var(--text-color-alt);
+    margin-right: 0.5rem;
+    line-height: 1.2rem;
+    font-weight: 600;
+}
+.copyrigth {
+    opacity: 0.6;
+    color: var(--text-color-alt);
+    margin: 0;
+    font-size: var(--small-font-size);
+}
+
