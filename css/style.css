@@ -47,7 +47,13 @@ h1,h2,h3,h4,h5,h6 {
 button {
     font-family: var(--body-font);
 }
-
+hr {
+    --spacing:0.75rem;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--spacing);
+    padding-top: var(--spacing);
+}
 /* ---------- Cabecera principal -------- */
 .place-center {
     display: flex;
