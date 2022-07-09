@@ -1,3 +1,8 @@
-# Curso-EDteam---Clon-de-YouTube
+#Clon-de-YouTube
 
-Se realiza un clon de YouTube con HTML y CSS para practicas de maquetado 
+Con el taller Crea un clon de YouTube con HTML y CSS se practica maquetación con HTML y CSS, se lleva el proyecto junto a git para practicar los prendido en:
+- git desde cero
+- github para programadores
+- HTML
+- CSS
+- JS
