@@ -15,6 +15,7 @@
     --bg-color-active:#e5e5e5;
     --text-color-white:#fff;
     --border-color:rgba(0, 0, 0, 0.1);
+    --bg-color-alt:#f9f9f9;
 
     /*font-family*/
     --body-font:'Roboto', sans-serif;
@@ -33,10 +34,12 @@
     --z-fixed:100;
     --border-radius:2px;
     --transition-time:0.25s;
+    --sidebar-width:240px;
 }
 /* ------------ General --------------*/
 body {
     font-family: var(--body-font);
+    background-color: var(--bg-color-alt    );
 }
 h1,h2,h3,h4,h5,h6 {
     font-weight: var(--font-bold);
@@ -56,6 +59,7 @@ button {
     gap: 0.5rem;
 }
 .main-header {
+    background-color: var(--text-color-white);
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -154,4 +158,47 @@ button {
 }
 [data-tooltip]:hover::after {
     opacity: 1;
+}
+
+/* ------ Menu Lateral --------*/
+
+.main-sidebar {
+    --main-nav-padding:0.5rem 1.5rem;
+    top: var(--header-height);
+    position: fixed;
+    background-color: var(--text-color-white);
+    height: calc(100vh - var(--header-height));
+    width: var(--sidebar-width);
+    padding: 0.75rem 0;
+    overflow: auto;
+}
+/* items de la navegacion */
+.main-nav .link {
+    padding: var(--main-nav-padding);
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.main-nav .link .icon {
+    font-size: 1.5rem;
+    color: var(--text-color-alt);
+    margin-right: 1.5rem;
+}
+.main-nav .link.is-active,
+.main-nav .link:hover {
+    background-color: var(--bg-color-alt);
+}
+.main-nav .link.link.is-active {
+    font-weight: var(--font-bold);
+}
+/*iconos de la navegacion*/
+.main-nav .link .icon {
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color-alt);
+}
+.main-nav .link.is-active .icon {
+    color: var(--accent-color);
 }
