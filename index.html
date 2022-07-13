@@ -267,137 +267,38 @@
             </footer>
         </nav>
     </div>
-    <main class="card-grid">
-        <article class="card-video">
-            <a href="#" class="cover">
-                <img 
-                src="https://images.pexels.com/photos/8322903/pexels-photo-8322903.jpeg" 
-                alt="cover-video" 
-                class="image">
-                <time class="time">05:45</time>
-            </a>
-            <div class="container flex">
-                <div class="user">                
-                    <div class="user-avatar">
-                        <img class="image" 
-                        src="img/snape.jpg" 
-                        alt="Foto del usuario">
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="title"><a href="#">Titulo del video</a></h3>
-                    <p>Nombre del usuario</p>
-                    <p class="video-information">
-                        <span class="views">1000.000 Visualizaciones</span>
-                        <span>Hace 1 semana</span>
-                    </p>
-                </div>
-            </div>    
-        </article>
-        <article class="card-video">
-            <a href="#" class="cover">
-                <img 
-                src="https://images.pexels.com/photos/8322903/pexels-photo-8322903.jpeg" 
-                alt="cover-video" 
-                class="image">
-                <time class="time">05:45</time>
-            </a>
-            <div class="container flex">
-                <div class="user">                
-                    <div class="user-avatar">
-                        <img class="image" 
-                        src="img/snape.jpg" 
-                        alt="Foto del usuario">
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="title"><a href="#">Titulo del video</a></h3>
-                    <p>Nombre del usuario</p>
-                    <p class="video-information">
-                        <span class="views">1000.000 Visualizaciones</span>
-                        <span>Hace 1 semana</span>
-                    </p>
-                </div>
-            </div>    
-        </article>
-        <article class="card-video">
-            <a href="#" class="cover">
-                <img 
-                src="https://images.pexels.com/photos/8322903/pexels-photo-8322903.jpeg" 
-                alt="cover-video" 
-                class="image">
-                <time class="time">05:45</time>
-            </a>
-            <div class="container flex">
-                <div class="user">                
-                    <div class="user-avatar">
-                        <img class="image" 
-                        src="img/snape.jpg" 
-                        alt="Foto del usuario">
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="title"><a href="#">Titulo del video</a></h3>
-                    <p>Nombre del usuario</p>
-                    <p class="video-information">
-                        <span class="views">1000.000 Visualizaciones</span>
-                        <span>Hace 1 semana</span>
-                    </p>
-                </div>
-            </div>    
-        </article>
-        <article class="card-video">
-            <a href="#" class="cover">
-                <img 
-                src="https://images.pexels.com/photos/8322903/pexels-photo-8322903.jpeg" 
-                alt="cover-video" 
-                class="image">
-                <time class="time">05:45</time>
-            </a>
-            <div class="container flex">
-                <div class="user">                
-                    <div class="user-avatar">
-                        <img class="image" 
-                        src="img/snape.jpg" 
-                        alt="Foto del usuario">
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="title"><a href="#">Titulo del video</a></h3>
-                    <p>Nombre del usuario</p>
-                    <p class="video-information">
-                        <span class="views">1000.000 Visualizaciones</span>
-                        <span>Hace 1 semana</span>
-                    </p>
-                </div>
-            </div>    
-        </article>
-        <article class="card-video">
-            <a href="#" class="cover">
-                <img 
-                src="https://images.pexels.com/photos/8322903/pexels-photo-8322903.jpeg" 
-                alt="cover-video" 
-                class="image">
-                <time class="time">05:45</time>
-            </a>
-            <div class="container flex">
-                <div class="user">                
-                    <div class="user-avatar">
-                        <img class="image" 
-                        src="img/snape.jpg" 
-                        alt="Foto del usuario">
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="title"><a href="#">Titulo del video</a></h3>
-                    <p>Nombre del usuario</p>
-                    <p class="video-information">
-                        <span class="views">1000.000 Visualizaciones</span>
-                        <span>Hace 1 semana</span>
-                    </p>
-                </div>
-            </div>    
-        </article>
+    <main class="card-grid" id="card-grid">           
     </main>
+    <template id="video-card">
+        <article class="card-video">
+            <a href="#" class="cover">
+                <img 
+                src="https://picsum.photos/200/300" 
+                alt="cover-video" 
+                class="image">
+                <time class="time">05:45</time>
+            </a>
+            <div class="container flex">
+                <div class="user">                
+                    <div class="user-avatar">
+                        <img class="image" 
+                        src="https://picsum.photos/200" 
+                        alt="Foto del usuario">
+                    </div>
+                </div>
+                <div class="content">
+                    <h3 class="rows-text-2 title ">
+                        <a href="#">Titulo del video</a>
+                    </h3>
+                    <p>Nombre del usuario</p>
+                    <p class="video-information">
+                        <span class="views">1000.000 Visualizaciones</span>
+                        <span>Hace 1 semana</span>
+                    </p>
+                </div>
+            </div>    
+        </article> 
+    </template>
+    <script src="js/scripts/cards.js" type="module"></script>
 </body>
 </html>

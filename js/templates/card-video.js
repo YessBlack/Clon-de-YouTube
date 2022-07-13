@@ -10,7 +10,7 @@ export const cardVideo = (data) => `
       <img class="image" src=${data.avatar}>
     </div>
     <div class="content">
-      <h3 class="title">
+      <h3 class="title rows-text-2">
         <a href="/video.html">#EDpodcast - 5: ¿Qué es el testing de software y cómo hacerlo? 🐞</a>
       </h3>
       <a href="#">EDteam</a>

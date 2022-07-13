@@ -65,6 +65,9 @@ hr {
     margin-bottom: var(--spacing);
     padding-top: var(--spacing);
 }
+img {
+    width: 100%;
+}
 body {
     min-height: 200vh;
 }
@@ -101,6 +104,22 @@ body {
 .buttons-container {
     display: flex;
     gap: 0.5rem;
+}
+/* ---- Clases para recortar lineas de texto ----*/
+[class*="rows-text"] {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--rows);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.rows-text-1 {
+    --rows:1;
+}
+.rows-text-2 {
+    --rows:2;
+}
+.rows-text-3 {
+    --rows:3;
 }
 .main-header {
     background-color: var(--text-color-white);
@@ -216,7 +235,6 @@ body {
     padding: 0.75rem 0;
     overflow: auto;
     left: 0;
-    top: 0;
     z-index: 1;
 }
 /* items de la navegacion */
@@ -303,7 +321,7 @@ body {
 
 /* ------------- tarjeta de video -------------*/
 .card-video {
-    max-width: 300px;
+    /*max-width: 300px;*/
 }
 .card-video a {
     text-decoration: none;
@@ -322,8 +340,8 @@ body {
 }
 .card-video .time {
     position: absolute;
-    right: 3.2rem;
-    bottom: 0.2rem;
+    right: .3rem;
+    bottom: .3rem;
     background:rgba(0, 0, 0, 0.8);
     color: var(--text-color-white);
     font-size: var(--smaller-font-size);
@@ -357,5 +375,8 @@ body {
 /* ------------ Grid de video ------------*/
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(247px,1fr));
+    gap: 2rem 1rem ;
+    padding: 1rem 2rem;
+    margin-inline: auto;
 }
