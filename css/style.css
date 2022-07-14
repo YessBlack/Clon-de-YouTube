@@ -65,6 +65,9 @@ hr {
     margin-bottom: var(--spacing);
     padding-top: var(--spacing);
 }
+hr.big {
+    margin-bottom: 1rem;
+}
 img {
     width: 100%;
 }
@@ -258,6 +261,15 @@ img {
     background-color: var(--button-color);
     cursor: var(--cursor-button);
     color: var(--text-button-color);
+}
+.button[disabled] {
+    --button-color:var(--bg-color-active);
+    --text-button-color: var(--gray-color);
+    --cursor-button:initial;
+}
+.button.link {
+    --text-button-color:var(--text-color-alt);
+    --button-color:transparent;
 }
 /* ------ Menu Lateral --------*/
 
@@ -467,37 +479,79 @@ body.video-page {
     gap: 1rem;
     color: var(--text-color);
 }
-
 .video-player-information .user-avatar {
     --size: 3rem;
 }
-
 .video-player-information .content {
     width: 100%;
 }
-
 .video-player-information .channel-name {
     color: inherit;
     text-decoration: none;
     font-size: var(--small-font-size);
     font-weight: var(--font-bold);
 }
-
 .video-player-information .subs-count {
     color: var(--text-color-alt);
     font-size: var(--smaller-font-size);
 }
-
 .video-player-information .header {
     margin-bottom: 1rem;
 }
-
 .video-player-information .header .button {
     margin-left: auto;
 }
-
 .video-player-information .caption {
     max-width: 600px;
     line-height: 1.25rem;
     font-size: var(--small-font-size);
+}
+/* ------- section comments --------*/
+.comments-information {
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.comment-form {
+    gap: 1rem;
+}
+.comment-form .form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.comment-form .input {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    font-size: var(--small-font-size);
+    box-shadow: 0 -1px inset var(--gray-color);
+    outline: none;
+}
+.comment-form .input:empty::before {
+    content: 'Añadir comentario...';
+    color: var(--text-color-alt);
+}
+.comment-form .input:not(:empty) ~ .buttons-container .button[disabled] {
+    background-color: #065fd4;
+    color: var(--text-color-white);
+}
+.comment-form .input:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: left var(--transition-time), width var(--transition-time);
+}
+.comment-form .input:focus::after {
+    width: 100%;
+    left: 0;
+}
+.comment-form .user-avatar {
+    --size: 2.5rem;
+}
+.comment-form .buttons-container {
+    margin-left: auto;
 }
