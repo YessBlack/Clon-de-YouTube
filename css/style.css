@@ -68,9 +68,6 @@ hr {
 img {
     width: 100%;
 }
-body {
-    min-height: 200vh;
-}
 /*----------------  scroll ---------------*/
 .scroll::-webkit-scrollbar {
     width: var(--scroll-size); /*Scroll Y*/
@@ -180,20 +177,45 @@ body {
     border-radius: 50%;
 }
 /*Botones de accion*/
-.action-button{
-   --size:2.5rem;
-   height: var(--size);
-   width: var(--size);
-   border-radius: 50%;
-   border: 1px solid transparent;
-   background: none;
-   transition: border-color var(--transition-time);
+.action-button,
+.action-button .icon {
+    --size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--size);
+    border: 1px solid transparent;
+    background: none;
+    cursor: pointer;
+    transition: border-color var(--transition-time);
 }
-.action-button::before {
+
+.action-button.has-text {
+    text-transform: uppercase;
+    color: var(--text-color-alt);
+    font-weight: var(--font-bold);
+    font-size: var(--small-font-size);
+}
+
+.action-button.has-text .icon {
+    --size: 2.25rem;
+    color: var(--gray-color);
+}
+
+.action-button:not(.has-text),
+.action-button .icon {
+    width: var(--size);
+    border-radius: 50%;
+}
+
+.action-button::before,
+.action-button .icon {
     color: var(--text-color-alt);
     font-size: 1.5rem;
 }
-.action-button:active{
+
+.action-button:not(.has-text):active,
+.action-button .icon:active {
     background-color: var(--bg-color-active);
     border-color: var(--bg-color-active);
 }
@@ -379,4 +401,50 @@ body {
     gap: 2rem 1rem ;
     padding: 1rem 2rem;
     margin-inline: auto;
+}
+
+/* --------- pagina de video -----------*/
+body.video-page {
+    padding-left: .6rem;
+}
+.video-page-grid {
+    --gap-page: 1.5rem;
+    width: calc(100% - (var(--gap-page) * 2));
+    max-width: 1600px;
+    display: grid;
+    gap: var(--gap-page);
+    grid-template-columns: repeat(12, 1fr);
+    margin-inline: auto;
+    padding-top: var(--gap-page);
+}
+.video-column {
+    grid-column-start: span 8;
+}
+.video-player .video {
+    aspect-ratio: 16/9;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.cards-sidebar {
+    background-color: #065FD4;
+    grid-column-start: span 3;
+}
+.video-player .title {
+    font-weight: normal;
+    font-size: var(--big-font-size);
+}
+.video-player .video-information {
+    font-size: var(--small-font-size);
+    color: var(--text-color-alt);
+}
+.video-player .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.video-player .buttons-container.likes {
+    border-bottom: 2px solid var(--gray-color);
+}
+.video-player .border {
+    padding-top: 0;
 }
