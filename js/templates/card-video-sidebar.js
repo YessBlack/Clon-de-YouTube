@@ -7,9 +7,9 @@ export const cardVideoSidebar = (data) => `
   </a>
   <div class="content">
       <h3 class="title rows-text-2">
-        <a href="/video.html">#EDpodcast - 5: ¿Qué es el testing de software y cómo hacerlo? 🐞</a>
+        <a href="/video.html">🧑‍⚖️ Tu WEB a JUICIO - Reviso webs, portfolios y apps de la comunidad | ¡NO TE TAPES LOS OJOS! 😱</a>
       </h3>
-      <a href="#">EDteam</a>
+      <a href="#">midulive</a>
       <p class="video-information">
         <span class="views">${data.views} visualizaciones</span>
         <span>Hace 2 horas</span>
